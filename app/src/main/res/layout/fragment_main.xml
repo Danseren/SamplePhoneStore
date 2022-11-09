@@ -25,20 +25,4 @@
 
     </androidx.cardview.widget.CardView>
 
-    <!-- BottomAppBar
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:backgroundTint="@color/color_secondary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation_menu"
-        app:hideOnScroll="true"
-        tools:ignore="BottomAppBar"
-        app:navigationIcon="@null"/>
-        -->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
