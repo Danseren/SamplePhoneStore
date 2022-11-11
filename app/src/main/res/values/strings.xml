@@ -4,4 +4,13 @@
     <string name="bag">Bag</string>
     <string name="favorite">Favorite</string>
     <string name="user">User</string>
+    <string name="tv_select_category">Select Category</string>
+    <string name="tv_view_all">view all</string>
+    <string name="search">Search</string>
+    <string name="tv_hot_sales">Hot sales</string>
+    <string name="tv_see_more">see more</string>
+    <string-array name="Geo_spinner">
+        <item>Zihuatanejo, Gro</item>
+        <item>New York, NY</item>
+    </string-array>
 </resources>

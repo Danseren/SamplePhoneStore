@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import ru.sample.store.denis.ui.main.MainFragment
 import ru.sample.store.denis.databinding.ActivityMainBinding
+import ru.sample.store.denis.ui.main.UpMainFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
+                .replace(R.id.container, UpMainFragment.newInstance())
                 .commitNow()
         }
     }
