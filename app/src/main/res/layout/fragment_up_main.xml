@@ -10,7 +10,7 @@
         android:id="@+id/iconGeo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:button="@drawable/sl_geo_24"
+        android:button="@drawable/sl_geo_16"
         app:buttonTint="@color/color_primary"
         app:layout_constraintBottom_toTopOf="@+id/guidelineTenPercent"
         app:layout_constraintEnd_toStartOf="@+id/spinnerGeo"
@@ -21,18 +21,18 @@
         android:id="@+id/spinnerGeo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:entries="@array/Geo_spinner"
         app:layout_constraintBottom_toTopOf="@+id/guidelineTenPercent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:entries="@array/Geo_spinner"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/iconFilter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:button="@drawable/sl_filter_24"
-        app:buttonTint="@color/color_primary"
+        android:button="@drawable/sl_filter_16"
+        app:buttonTint="@color/color_secondary"
         app:layout_constraintBottom_toTopOf="@+id/guidelineTenPercent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/spinnerGeo"
@@ -50,7 +50,11 @@
         android:id="@+id/tvSelectCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
         android:text="@string/tv_select_category"
+        android:textColor="@color/color_secondary"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guidelineFifteenPercent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineTenPercent" />
@@ -60,6 +64,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_view_all"
+        android:textSize="15sp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/color_primary"
         app:layout_constraintBottom_toTopOf="@+id/guidelineFifteenPercent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineTenPercent" />
@@ -71,15 +78,156 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.15" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewCategory"
+    <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:scrollbarSize="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guidelineThirtyPercent"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineFifteenPercent" />
+        app:layout_constraintTop_toTopOf="@+id/guidelineFifteenPercent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/checkboxPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/btn_shape_circle"
+                android:button="@drawable/ic_phone_32"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/checkboxComputer"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_phone"
+                android:textSize="12sp"
+                android:textColor="@color/color_secondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/checkboxPhone"
+                app:layout_constraintStart_toStartOf="@+id/checkboxPhone"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxPhone" />
+
+            <CheckBox
+                android:id="@+id/checkboxComputer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/btn_shape_circle"
+                android:button="@drawable/ic_computer_32"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/checkboxHealth"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/checkboxPhone"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvComputer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_computer"
+                android:textSize="12sp"
+                android:textColor="@color/color_secondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/checkboxComputer"
+                app:layout_constraintStart_toStartOf="@+id/checkboxComputer"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxComputer" />
+
+            <CheckBox
+                android:id="@+id/checkboxHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/btn_shape_circle"
+                android:button="@drawable/ic_health_32"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/checkboxBooks"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/checkboxComputer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_health"
+                android:textSize="12sp"
+                android:textColor="@color/color_secondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/checkboxHealth"
+                app:layout_constraintStart_toStartOf="@+id/checkboxHealth"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxHealth" />
+
+            <CheckBox
+                android:id="@+id/checkboxBooks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/btn_shape_circle"
+                android:button="@drawable/ic_books_32"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/checkboxOther"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/checkboxHealth"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOther"
+                android:layout_width="43dp"
+                android:layout_height="15dp"
+                android:text="@string/tv_other"
+                android:textSize="12sp"
+                android:textColor="@color/color_secondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/checkboxOther"
+                app:layout_constraintStart_toEndOf="@+id/checkboxBooks"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxBooks" />
+
+            <CheckBox
+                android:id="@+id/checkboxOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/btn_shape_circle"
+                android:button="@drawable/ic_other_32"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/checkboxBooks"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBooks"
+                android:layout_width="43dp"
+                android:layout_height="15dp"
+                android:text="@string/tv_books"
+                android:textSize="12sp"
+                android:textColor="@color/color_secondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/checkboxBooks"
+                app:layout_constraintStart_toStartOf="@+id/checkboxBooks"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxBooks" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineThirtyPercent"
@@ -88,65 +236,187 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.3" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardInputEditText"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="@string/search"
-        app:startIconCheckable="true"
-        app:startIconDrawable="@drawable/ic_find_24"
-        app:startIconTint="@color/color_primary"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineThirtyPercent">
+        app:layout_constraintTop_toTopOf="@+id/guidelineThirtyPercent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="40dp"
+        >
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/input_edit_text"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:hint="@string/search"
+            app:hintTextColor="@color/color_secondary"
+            android:minWidth="300dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineThirtyPercent"
+            app:startIconCheckable="true"
+            app:startIconDrawable="@drawable/ic_find_24"
+            app:startIconTint="@color/color_primary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:inputType="text"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:id="@+id/checkboxQrCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/btn_shape_circle"
+        android:button="@drawable/ic_qrcode_16"
+        android:minWidth="40dp"
+        android:minHeight="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineFourtyPercent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardInputEditText"
+        app:layout_constraintTop_toTopOf="@+id/guidelineThirtyPercent"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineFourtyPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4"/>
+        app:layout_constraintGuide_percent="0.4" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvHotSales"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
         android:text="@string/tv_hot_sales"
+        android:textColor="@color/color_secondary"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineFourtyPercent"/>
+        app:layout_constraintTop_toTopOf="@+id/guidelineFourtyPercent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSeeMore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_see_more"
+        android:textSize="15sp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/color_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineFourtyPercent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewHotSales"
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/guidelineSixtyPercent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHotSales" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHotSales" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewHotSales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </HorizontalScrollView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineSixtyPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.63"/>
+        app:layout_constraintGuide_percent="0.63" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBestSeller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="@string/tv_best_seller"
+        android:textColor="@color/color_secondary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineSixtyPercent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSeeMoreBestSeller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="@string/tv_see_more"
+        android:textSize="15sp"
+        android:textColor="@color/color_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineSixtyPercent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/tvBestSeller">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewBestSellers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:spanCount="2">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/color_secondary"
+            app:itemIconTint="@color/white"
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemTextColor="@color/white"/>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
