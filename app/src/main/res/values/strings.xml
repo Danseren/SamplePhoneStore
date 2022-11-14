@@ -16,8 +16,28 @@
     <string name="tv_other">Other</string>
     <string name="btn_buy_now">Buy now!</string>
     <string name="tv_best_seller">Best seller</string>
+    <string name="tv_filter_options">Filter options</string>
+    <string name="btn_done">Done</string>
+    <string name="tv_title_brand">Brand</string>
+    <string name="tv_title_price">Price</string>
+    <string name="tv_title_size">Size</string>
     <string-array name="Geo_spinner">
         <item>Zihuatanejo, Gro</item>
         <item>New York, NY</item>
+    </string-array>
+    <string-array name="Brand_spinner">
+        <item>Samsung</item>
+        <item>Apple</item>
+        <item>Xiaomi</item>
+        <item>Motorola</item>
+    </string-array>
+    <string-array name="Price_spinner">
+        <item>$300 - $500</item>
+        <item>$501 - $1000</item>
+        <item>$1001 - $2000</item>
+    </string-array>
+    <string-array name="Size_spinner">
+        <item>4.5 to 5.5 inches</item>
+        <item>5.6 to 6.5 inches</item>
     </string-array>
 </resources>
