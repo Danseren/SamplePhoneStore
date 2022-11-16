@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import ru.sample.store.denis.R
 import ru.sample.store.denis.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
@@ -29,13 +30,6 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-//        val fragment = UpMainFragment()
-//        val transaction = requireActivity().supportFragmentManager
-//            .beginTransaction()
-//            .replace(binding.upFrameLayout, fragment)
-//            .commit()
-
         //viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
     }
 

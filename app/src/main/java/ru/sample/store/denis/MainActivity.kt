@@ -2,7 +2,6 @@ package ru.sample.store.denis
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ru.sample.store.denis.ui.main.MainFragment
 import ru.sample.store.denis.databinding.ActivityMainBinding
 import ru.sample.store.denis.ui.main.UpMainFragment
 
@@ -21,4 +20,5 @@ class MainActivity : AppCompatActivity() {
                 .commitNow()
         }
     }
+
 }

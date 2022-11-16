@@ -21,6 +21,19 @@
     <string name="tv_title_brand">Brand</string>
     <string name="tv_title_price">Price</string>
     <string name="tv_title_size">Size</string>
+    <string name="btn_shop">Shop</string>
+    <string name="btn_details">Details</string>
+    <string name="btn_features">Features</string>
+    <string name="tv_cpu">Exynos 990</string>
+    <string name="tv_camera">108 + 12 mp</string>
+    <string name="tv_ram">8 Gb</string>
+    <string name="tv_sd">256 Gb</string>
+    <string name="tv_select_color_and_capacity">Select color and capacity</string>
+    <string name="btn_128_gb_on">128 GB</string>
+    <string name="btn_128_gb_off">128 gb</string>
+    <string name="btn_256_gb_on">256 GB</string>
+    <string name="btn_256_gb_off">256 gb</string>
+    <string name="tv_product_details">Product Details</string>
     <string-array name="Geo_spinner">
         <item>Zihuatanejo, Gro</item>
         <item>New York, NY</item>
@@ -32,7 +45,8 @@
         <item>Motorola</item>
     </string-array>
     <string-array name="Price_spinner">
-        <item>$300 - $500</item>
+        <item>$0 - $300</item>
+        <item>$301 - $500</item>
         <item>$501 - $1000</item>
         <item>$1001 - $2000</item>
     </string-array>

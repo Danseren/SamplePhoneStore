@@ -3,12 +3,14 @@ package ru.sample.store.denis.ui.main
 import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import ru.sample.store.denis.R
 import ru.sample.store.denis.databinding.CardRecyclerBestSellerBinding
 import ru.sample.store.denis.model.DataCardBestSeller
 
 class RecyclerCardBestSellerAdapter(private val listData: List<DataCardBestSeller>) :
-    RecyclerView.Adapter<RecyclerCardBestSellerAdapter.CardBestSellerViewHolder>()  {
+    RecyclerView.Adapter<RecyclerCardBestSellerAdapter.CardBestSellerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardBestSellerViewHolder {
         val binding = CardRecyclerBestSellerBinding.inflate(LayoutInflater.from(parent.context))
@@ -18,6 +20,15 @@ class RecyclerCardBestSellerAdapter(private val listData: List<DataCardBestSelle
     override fun onBindViewHolder(holder: CardBestSellerViewHolder, position: Int) {
         val dataCardBestSeller = listData[position]
         holder.bind(dataCardBestSeller)
+
+        holder.itemView.setOnClickListener {
+            val activity = it!!.context as AppCompatActivity
+            activity.supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.container, ProductDetailsFragment())
+                .addToBackStack(null)
+                .commit()
+        }
     }
 
     override fun getItemCount(): Int {
@@ -26,6 +37,7 @@ class RecyclerCardBestSellerAdapter(private val listData: List<DataCardBestSelle
 
     class CardBestSellerViewHolder(private val binding: CardRecyclerBestSellerBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
         fun bind(dataCardBestSeller: DataCardBestSeller) {
 
             binding.cardContainer.setBackgroundResource(dataCardBestSeller.picture)
@@ -39,6 +51,7 @@ class RecyclerCardBestSellerAdapter(private val listData: List<DataCardBestSelle
             if (dataCardBestSeller.favorite) {
                 binding.checkboxPhone.isChecked = true
             } else binding.checkboxPhone.isChecked = false
+
         }
     }
 }
