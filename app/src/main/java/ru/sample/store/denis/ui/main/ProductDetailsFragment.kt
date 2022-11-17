@@ -35,7 +35,6 @@ class ProductDetailsFragment: Fragment() {
             DataCardDetails(R.drawable.samsung_note_20_ultra),
             DataCardDetails(R.drawable.samsung_note_20_ultra_3),
             DataCardDetails(R.drawable.samsung_note_20_ultra_2)
-
         )
 
         binding.recyclerProductDetails.adapter = RecyclerDetails(dataCardDetails)

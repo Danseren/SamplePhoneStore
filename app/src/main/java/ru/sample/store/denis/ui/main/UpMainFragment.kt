@@ -9,10 +9,10 @@ import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import androidx.fragment.app.Fragment
+import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import ru.sample.store.denis.R
 import ru.sample.store.denis.databinding.FragmentUpMainBinding
-import ru.sample.store.denis.databinding.MessageBoxBinding
 import ru.sample.store.denis.model.DataCardBestSeller
 import ru.sample.store.denis.model.DataCardHotSales
 
@@ -20,6 +20,8 @@ class UpMainFragment: Fragment() {
 
     private var _binding: FragmentUpMainBinding? = null
     private val binding get() = _binding!!
+
+    private val bottom_badge_length = 2
 
     companion object {
         fun newInstance() = UpMainFragment()
@@ -54,6 +56,30 @@ class UpMainFragment: Fragment() {
 
         binding.iconFilter.setOnClickListener {
             showMessageBox()
+        }
+
+        binding.bottomNavigation.apply {
+
+            setOnItemSelectedListener { item ->
+                when (item.itemId) {
+                    R.id.bottom_bag -> {
+                        requireActivity()
+                            .supportFragmentManager
+                            .beginTransaction()
+                            .addToBackStack("")
+                            .replace(R.id.container, MyCartFragment.newInstance())
+                            .commit()
+                        true
+                    }
+                    else -> true
+                }
+            }
+            val badge = binding.bottomNavigation.getOrCreateBadge(R.id.bottom_bag)
+            badge.number = 4
+            badge.maxCharacterCount = bottom_badge_length
+            badge.badgeGravity = BadgeDrawable.BOTTOM_START
+
+
         }
     }
 

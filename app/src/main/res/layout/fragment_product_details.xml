@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.1"/>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.47" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -107,7 +107,7 @@
                 android:layout_marginLeft="5dp"
                 android:text="Samsung Note 20 Ultra"
                 android:textColor="@color/color_secondary"
-                android:textSize="25sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -179,7 +179,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_shop"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/color_secondary"
                 app:layout_constraintEnd_toStartOf="@+id/textBtnDetails"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -193,7 +193,7 @@
                 android:layout_height="wrap_content"
                 android:alpha="50"
                 android:text="@string/btn_details"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/color_secondary"
                 app:layout_constraintEnd_toStartOf="@+id/textBtnFeatures"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -207,7 +207,7 @@
                 android:layout_height="wrap_content"
                 android:alpha="50"
                 android:text="@string/btn_features"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/color_secondary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -218,7 +218,7 @@
                 android:id="@+id/cardCpu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/cardCamera"
                 app:layout_constraintTop_toBottomOf="@+id/textBtnShop"
@@ -251,7 +251,7 @@
                 android:id="@+id/cardCamera"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toEndOf="@+id/cardCpu"
                 app:layout_constraintEnd_toStartOf="@+id/cardRam"
                 app:layout_constraintTop_toBottomOf="@+id/textBtnShop"
@@ -285,7 +285,7 @@
                 android:id="@+id/cardRam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toEndOf="@+id/cardCamera"
                 app:layout_constraintEnd_toStartOf="@+id/cardSd"
                 app:layout_constraintTop_toBottomOf="@+id/textBtnShop"
@@ -319,7 +319,7 @@
                 android:id="@+id/cardSd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/cardRam"
                 app:layout_constraintTop_toBottomOf="@+id/textBtnShop"

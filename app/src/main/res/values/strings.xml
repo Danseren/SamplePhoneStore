@@ -34,6 +34,13 @@
     <string name="btn_256_gb_on">256 GB</string>
     <string name="btn_256_gb_off">256 gb</string>
     <string name="tv_product_details">Product Details</string>
+    <string name="tv_add_address">Add address</string>
+    <string name="tv_my_cart">My Cart</string>
+    <string name="btn_checkout">Checkout</string>
+    <string name="tv_total">Total</string>
+    <string name="tv_delivery">Delivery</string>
+    <string name="tv_delivery_value">Free</string>
+    <string name="tv_total_value">$6,000 us</string>
     <string-array name="Geo_spinner">
         <item>Zihuatanejo, Gro</item>
         <item>New York, NY</item>
