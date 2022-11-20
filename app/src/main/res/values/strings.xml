@@ -41,6 +41,7 @@
     <string name="tv_delivery">Delivery</string>
     <string name="tv_delivery_value">Free</string>
     <string name="tv_total_value">$6,000 us</string>
+    <string name="btn_new">New</string>
     <string-array name="Geo_spinner">
         <item>Zihuatanejo, Gro</item>
         <item>New York, NY</item>

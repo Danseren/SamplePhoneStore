@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/btn_quadro"
         android:button="@drawable/ic_back_arrow_16"
-        android:minWidth="40dp"
-        android:minHeight="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:minWidth="@dimen/my_cart_checkbox_min_height_width"
+        android:minHeight="@dimen/my_cart_checkbox_min_height_width"
+        android:layout_marginStart="@dimen/my_cart_margin"
+        android:layout_marginTop="@dimen/my_cart_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,10 +23,10 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
         android:text="@string/tv_add_address"
         android:textColor="@color/color_secondary"
-        android:textSize="15sp"
+        android:textSize="@dimen/text_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/checkboxCart"
         app:layout_constraintEnd_toStartOf="@+id/checkboxCart"
@@ -38,10 +38,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/btn_quadro"
         android:button="@drawable/ic_geo_16"
-        android:minWidth="40dp"
-        android:minHeight="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
+        android:minWidth="@dimen/my_cart_checkbox_min_height_width"
+        android:minHeight="@dimen/my_cart_checkbox_min_height_width"
+        android:layout_marginTop="@dimen/my_cart_margin"
+        android:layout_marginEnd="@dimen/my_cart_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,10 +56,10 @@
         android:id="@+id/tvMyCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="@dimen/my_cart_margin"
         android:text="@string/tv_my_cart"
         android:textColor="@color/color_secondary"
-        android:textSize="35sp"
+        android:textSize="@dimen/text_size_extra_large"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guidelineTenPercent" />
@@ -73,8 +73,8 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="510dp"
-        app:cardCornerRadius="32dp"
+        android:layout_height="@dimen/my_cart_card_height"
+        app:cardCornerRadius="@dimen/corner_radius_large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,13 +102,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="4dp"
+                        android:paddingTop="@dimen/my_cart_recycler_padding_top"
+                        android:paddingRight="@dimen/my_cart_recycler_padding_left_right"
+                        android:paddingLeft="@dimen/my_cart_recycler_padding_left_right"
                         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                    </androidx.recyclerview.widget.RecyclerView>
+                        app:layout_constraintTop_toTopOf="parent"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -117,8 +117,8 @@
             <View
                 android:id="@+id/viewTop"
                 android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:layout_marginBottom="20dp"
+                android:layout_height="@dimen/my_cart_line_height"
+                android:layout_marginBottom="@dimen/my_cart_margin"
                 android:background="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/tvTotal"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -127,11 +127,11 @@
                 android:id="@+id/tvTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginStart="@dimen/my_cart_text_margin_start_top"
+                android:layout_marginBottom="@dimen/my_cart_margin"
                 android:text="@string/tv_total"
                 android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textSize="@dimen/text_size"
                 app:layout_constraintBottom_toTopOf="@+id/tvDelivery"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -139,11 +139,11 @@
                 android:id="@+id/tvTotalValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="25dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="@dimen/my_cart_tv_total_margin_end"
+                android:layout_marginBottom="@dimen/my_cart_margin"
                 android:text="@string/tv_total_value"
                 android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textSize="@dimen/text_size"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/tvDeliveryValue"
                 app:layout_constraintEnd_toEndOf="parent" />
@@ -152,11 +152,11 @@
                 android:id="@+id/tvDelivery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginStart="@dimen/my_cart_text_margin_start_top"
+                android:layout_marginBottom="@dimen/my_cart_tv_delivery_margin_bottom"
                 android:text="@string/tv_delivery"
                 android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textSize="@dimen/text_size"
                 app:layout_constraintBottom_toTopOf="@+id/viewBottom"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -164,11 +164,11 @@
                 android:id="@+id/tvDeliveryValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="60dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="@dimen/my_cart_text_margin_start_top"
+                android:layout_marginBottom="@dimen/my_cart_margin"
                 android:text="@string/tv_delivery_value"
                 android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textSize="@dimen/text_size"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/viewBottom"
                 app:layout_constraintEnd_toEndOf="parent" />
@@ -176,8 +176,8 @@
             <View
                 android:id="@+id/viewBottom"
                 android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:layout_marginBottom="30dp"
+                android:layout_height="@dimen/my_cart_line_height"
+                android:layout_marginBottom="@dimen/my_cart_line_margin_bottom"
                 android:background="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/btnCheckout"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -187,13 +187,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/btn_new"
-                android:layout_marginBottom="40dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
+                android:layout_marginBottom="@dimen/my_cart_btn_checkout_margin"
+                android:layout_marginLeft="@dimen/my_cart_btn_checkout_margin"
+                android:layout_marginRight="@dimen/my_cart_btn_checkout_margin"
                 android:text="@string/btn_checkout"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="@dimen/text_size_medium"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

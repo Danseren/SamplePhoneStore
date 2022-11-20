@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_padding">5dp</dimen>
+    <dimen name="corner_radius_small">8dp</dimen>
+    <dimen name="corner_radius_medium">22dp</dimen>
+    <dimen name="corner_radius_large">32dp</dimen>
+    <dimen name="checkbox_elevation">12dp</dimen>
+    <dimen name="elevation_zero">0dp</dimen>
+
+    <dimen name="text_size_small">10sp</dimen>
+    <dimen name="text_size_m_small">12sp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_m_large">22sp</dimen>
+    <dimen name="text_size_large">25sp</dimen>
+    <dimen name="text_size_extra_large">35sp</dimen>
+
+    <dimen name="card_details_width">200dp</dimen>
+    <dimen name="card_details_layout_height">240dp</dimen>
+
+    <dimen name="card_best_seller_width">180dp</dimen>
+    <dimen name="card_best_seller_height">215dp</dimen>
+    <dimen name="best_seller_layout_height">165dp</dimen>
+    <dimen name="best_seller_checkbox_min_height_width">30dp</dimen>
+    <dimen name="best_seller_checkbox_margin">20dp</dimen>
+    <dimen name="best_seller_text_margin">10dp</dimen>
+
+    <dimen name="card_hot_sales_width">370dp</dimen>
+    <dimen name="card_hot_sales_height">140dp</dimen>
+    <dimen name="hot_sales_btn_min_height_width">25dp</dimen>
+    <dimen name="hot_sales_btn_margin_left">20dp</dimen>
+    <dimen name="hot_sales_btn_margin_top">10dp</dimen>
+    <dimen name="hot_sales_margin_start">20dp</dimen>
+    <dimen name="hot_sales_btn_min_height">12dp</dimen>
+    <dimen name="hot_sales_btn_min_width">112dp</dimen>
+
+    <dimen name="my_cart_checkbox_min_height_width">40dp</dimen>
+    <dimen name="my_cart_margin">20dp</dimen>
+    <dimen name="my_cart_card_height">510dp</dimen>
+    <dimen name="my_cart_recycler_padding_top">40dp</dimen>
+    <dimen name="my_cart_recycler_padding_left_right">20dp</dimen>
+    <dimen name="my_cart_text_margin_start_top">60dp</dimen>
+    <dimen name="my_cart_tv_total_margin_end">25dp</dimen>
+    <dimen name="my_cart_tv_delivery_margin_bottom">20dp</dimen>
+    <dimen name="my_cart_line_height">1px</dimen>
+    <dimen name="my_cart_line_margin_bottom">30dp</dimen>
+    <dimen name="my_cart_btn_checkout_margin">40dp</dimen>
+    <dimen name="card_my_cart_height">100dp</dimen>
+    <dimen name="my_cart_picture_size">100dp</dimen>
+    <dimen name="my_cart_text_margin_start">20dp</dimen>
+
+    <dimen name="details_checkbox_min_height_width">40dp</dimen>
+    <dimen name="details_checkbox_margin">20dp</dimen>
+    <dimen name="details_recycler_padding">4dp</dimen>
+    <dimen name="details_card_padding">20dp</dimen>
+    <dimen name="details_tv_margin_start">5dp</dimen>
+    <dimen name="details_card_margin_top">10dp</dimen>
+    <dimen name="details_btn_margin">20dp</dimen>
+    <dimen name="details_btn_height">30dp</dimen>
+
+    <dimen name="up_main_tv_margin_start">5dp</dimen>
+    <dimen name="up_main_tv_margin_end">20dp</dimen>
+    <dimen name="up_main_checkbox_margin_start">20dp</dimen>
+    <dimen name="up_main_checkbox_margin_end">15dp</dimen>
+    <dimen name="up_main_checkbox_min_width_height">70dp</dimen>
+    <dimen name="up_main_text_input_width">300dp</dimen>
+    <dimen name="up_main_input_edit_text_margin_start">20dp</dimen>
+    <dimen name="up_main_input_edit_text_margin_top">10dp</dimen>
+    <dimen name="up_main_input_edit_text_height">40dp</dimen>
+    <dimen name="up_main_checkbox_qr_min_width_height">40dp</dimen>
+    <dimen name="up_main_recycler_padding">4dp</dimen>
+
+    <dimen name="message_box_layout_padding">20dp</dimen>
+    <dimen name="message_box_checkbox_min_width_height">40dp</dimen>
+    <dimen name="message_box_relative_layout_height">35dp</dimen>
+    <dimen name="message_box_spinner_margin_start">5dp</dimen>
+    <dimen name="message_box_spinner_image_margin_end">12dp</dimen>
+    <dimen name="message_box_tv_margin_top">50dp</dimen>
+</resources>

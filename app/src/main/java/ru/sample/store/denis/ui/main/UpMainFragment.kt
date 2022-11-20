@@ -90,7 +90,6 @@ class UpMainFragment: Fragment() {
         val messageBoxView = LayoutInflater.from(activity).inflate(R.layout.message_box, null)
 
         //AlertDialogBuilder
-        //val messageBoxBuilder = AlertDialog.Builder(activity).setView(messageBoxView)
         val messageBoxBuilder = MaterialAlertDialogBuilder(requireActivity(), R.style.MaterialAlertDialog_rounded).setView(messageBoxView)
 
         //show dialog

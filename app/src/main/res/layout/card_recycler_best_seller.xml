@@ -5,15 +5,14 @@
     android:id="@+id/bestSellerContainer"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="5dp"
-    >
+    android:padding="@dimen/layout_padding"    >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="180dp"
-        android:layout_height="215dp"
+        android:layout_width="@dimen/card_best_seller_width"
+        android:layout_height="@dimen/card_best_seller_height"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:cardCornerRadius="8dp">
+        app:cardCornerRadius="@dimen/corner_radius_small">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -23,7 +22,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cardContainer"
                 android:layout_width="match_parent"
-                android:layout_height="165dp"
+                android:layout_height="@dimen/best_seller_layout_height"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -35,13 +34,13 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/btn_shape_circle"
                     android:button="@drawable/ic_favorite_16"
-                    android:minWidth="30dp"
-                    android:minHeight="30dp"
+                    android:minWidth="@dimen/best_seller_checkbox_min_height_width"
+                    android:minHeight="@dimen/best_seller_checkbox_min_height_width"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:elevation="12dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="20dp"/>
+                    android:elevation="@dimen/checkbox_elevation"
+                    android:layout_marginEnd="@dimen/best_seller_checkbox_margin"
+                    android:layout_marginTop="@dimen/best_seller_checkbox_margin"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -50,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/color_secondary"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_size"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardContainer" />
@@ -59,10 +58,10 @@
                 android:id="@+id/tvDiscountPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginLeft="@dimen/best_seller_text_margin"
+                android:layout_marginTop="@dimen/best_seller_text_margin"
                 android:textColor="#CCCCCC"
-                android:textSize="10sp"
+                android:textSize="@dimen/text_size_small"
                 app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
                 app:layout_constraintStart_toEndOf="@+id/tvPrice" />
 
@@ -71,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/color_secondary"
-                android:textSize="10sp"
+                android:textSize="@dimen/text_size_small"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
 
